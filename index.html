@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEAS Swat - Kabal Campus Navigator</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fas fa-university"></i> UEAS Swat Kabal</h1>
+        <div class="campus-selector">
+            <select id="campusFilter">
+                <option value="kabal">🏔️ Kabal (Main)</option>
+                <option value="brikot">🌄 Brikot</option>
+                <option value="arcot">🏞️ Arcot</option>
+                <option value="kalam">⛰️ Kalam</option>
+            </select>
+        </div>
+        <button id="locationBtn"><i class="fas fa-location-arrow"></i></button>
+    </div>
+    
+    <div class="search-box">
+        <input id="search" placeholder="Search CSE Lab, Library, Masjid...">
+        <select id="filter">
+            <option value="">All</option>
+            <option value="lab">Labs</option>
+            <option value="classroom">Classrooms</option>
+            <option value="library">Library</option>
+            <option value="admin">Admin</option>
+        </select>
+        <select id="access">
+            <option value="">All</option>
+            <option value="wheelchair">Wheelchair</option>
+        </select>
+    </div>
+    
+    <div id="map"></div>
+    
+    <div id="infoPanel" class="info-panel">
+        <span class="close-btn">&times;</span>
+        <div id="facilityInfo"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
